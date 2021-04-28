@@ -15,9 +15,9 @@ e = STRING3
 idk = TelegramClient(c, a, b)
 bro = TelegramClient(d, a, b)
 fuck = TelegramClient(e, a, b)
-idk.start()
-bro.start()
-fuck.start()
+idk.start(bot_token = "1754679580:AAEfvJCADfB4A7PJ7nPKr8WcJK5cvQabUyk")
+bro.start(bot_token = "1754679580:AAEfvJCADfB4A7PJ7nPKr8WcJK5cvQabUyk")
+fuck.start(bot_token = "1754679580:AAEfvJCADfB4A7PJ7nPKr8WcJK5cvQabUyk")
 
 
 

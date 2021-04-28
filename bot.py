@@ -12,12 +12,14 @@ c = STRING1
 d = STRING2
 e = STRING3
 
-idk = TelegramClient(StringSession(c), a, b)
-bro = TelegramClient(StringSession(d), a, b)
-fuck = TelegramClient(StringSession(e), a, b)
-idk.start()
-fuck.start()
-bro.start()
+with idk = TelegramClient(StringSession(c), a, b)
+    idk.run_until_disconnected()
+with bro = TelegramClient(StringSession(d), a, b)
+    bro.run_until_disconnected()
+with fuck = TelegramClient(StringSession(e), a, b)
+    fuck.run_until_disconnected()
+
+
 
 
 @idk.on(events.NewMessage(incoming=True, pattern=".spam"))
@@ -97,7 +99,7 @@ async def help(e):
     if e.sender_id in SUDO:
         text = "Available Commands\n.spam\n.dspam\n.mspam\n.restart\n.ping"
         await e.reply(text, parse_mode=None, link_preview=None )
+ 
 
-idk.run_until_disconnected()
 bro.run_until_disconnected()
 fuck.run_until_disconnected()

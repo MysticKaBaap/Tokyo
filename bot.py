@@ -94,8 +94,9 @@ async def restart(e):
 @bro.on(events.NewMessage(incoming=True, pattern=".help"))
 @fuck.on(events.NewMessage(incoming=True, pattern=".help"))
 async def help(e):
-    text = "Available Commands\n.spam\n.dspam\n.mspam\n.restart\n.ping"
-    await e.reply(text, parse_mode=None, link_preview=None )
+    if e.sender_id in SUDO:
+        text = "Available Commands\n.spam\n.dspam\n.mspam\n.restart\n.ping"
+        await e.reply(text, parse_mode=None, link_preview=None )
 
 idk.run_until_disconnected()
 bro.run_until_disconnected()

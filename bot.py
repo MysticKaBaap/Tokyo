@@ -18,7 +18,7 @@ fuck = TelegramClient(e, a, b)
 idk.start(bot_token = "1754679580:AAEfvJCADfB4A7PJ7nPKr8WcJK5cvQabUyk")
 bro.start(bot_token = "1754679580:AAEfvJCADfB4A7PJ7nPKr8WcJK5cvQabUyk")
 fuck.start(bot_token = "1754679580:AAEfvJCADfB4A7PJ7nPKr8WcJK5cvQabUyk")
-
+print("Booting Up The System")
 
 
 @idk.on(events.NewMessage(incoming=True, pattern=".spam"))
@@ -99,7 +99,7 @@ async def help(e):
         text = "Available Commands\n.spam\n.dspam\n.mspam\n.restart\n.ping"
         await e.reply(text, parse_mode=None, link_preview=None )
  
-
+print("started sucessfully")
 bro.run_until_disconnected()
 fuck.run_until_disconnected()
 idk.run_until_disconnected()

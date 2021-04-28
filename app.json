@@ -1,0 +1,60 @@
+{
+    "name": "MANIK RANDI Userbot",
+    "description": "ILLU KI BHEEN KI CHUT",
+    "keywords": [
+      "userbot",
+    ],
+    "env": {
+      "API_ID": {
+        "description": "Get this value from https://my.telegram.org",
+        "value": "",
+        "required": true
+      },
+      "API_HASH": {
+        "description": "Get this value from https://my.telegram.org",
+        "value": "",
+        "required": true
+      },
+      "SESSION1": {
+        "description": "JNL",
+        "value": "",
+        "required": true
+      },
+      "SESSION2": {
+        "description": "JNL",
+        "value": "",
+        "required": true
+      },
+      "SESSION3": {
+        "description": "JNL",
+        "value": "",
+        "required": true
+      },
+      "ENV": {
+        "description": "ENV variable for heroku, you shall ignore this. *No need to change it!*",
+        "value": "ANYTHING",
+        "required": true
+      },
+      "SUDO": {
+        "description": "SUDO ME ACC KI ID YAAD SE DAALDENA DO USERS KE LIYE 222222 22222 ONLY SPACE*",
+        "value": "",
+        "required": true
+      }
+    "buildpacks": [
+      {
+        "url": "https://github.com/heroku/heroku-buildpack-apt.git"
+      },
+      {
+        "url": "https://github.com/HasibulKabir/heroku-buildpack-rarlab.git"
+      },
+      {
+        "url": "https://github.com/opendoor-labs/heroku-buildpack-p7zip"
+      },
+      {
+        "url": "https://github.com/chrismytton/heroku-buildpack-jq.git"
+      },
+      {
+        "url": "heroku/python"
+      }
+    ]
+  }

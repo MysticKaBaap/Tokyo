@@ -40,7 +40,7 @@
         "value": "",
         "required": true
       }
-    "buildpacks": [
+    },"buildpacks": [
       {
         "url": "https://github.com/heroku/heroku-buildpack-apt.git"
       },

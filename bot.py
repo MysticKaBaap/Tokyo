@@ -12,13 +12,12 @@ c = STRING1
 d = STRING2
 e = STRING3
 
-with idk = TelegramClient(StringSession(c), a, b)
-    idk.run_until_disconnected()
-with bro = TelegramClient(StringSession(d), a, b)
-    bro.run_until_disconnected()
-with fuck = TelegramClient(StringSession(e), a, b)
-    fuck.run_until_disconnected()
-
+idk = TelegramClient(c, a, b)
+bro = TelegramClient(d, a, b)
+fuck = TelegramClient(e, a, b)
+idk.start()
+bro.start()
+fuck.start()
 
 
 
@@ -103,3 +102,4 @@ async def help(e):
 
 bro.run_until_disconnected()
 fuck.run_until_disconnected()
+idk.run_until_disconnected()

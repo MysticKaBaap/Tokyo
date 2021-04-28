@@ -2,7 +2,7 @@
     "name": "MANIK RANDI Userbot",
     "description": "ILLU KI BHEEN KI CHUT",
     "keywords": [
-      "userbot",
+      "userbot"
     ],
     "env": {
       "API_ID": {

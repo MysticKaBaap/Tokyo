@@ -12,9 +12,9 @@ c = STRING1
 d = STRING2
 e = STRING3
 
-with idk = TelegramClient(c, a, b)
-with bro = TelegramClient(d, a, b)
-with fuck = TelegramClient(e, a, b)
+with idk = TelegramClient(c, a, b) as idk:
+with bro = TelegramClient(d, a, b) as bro:
+with fuck = TelegramClient(e, a, b) as fuck:
 
     print("Booting Up The System")
 

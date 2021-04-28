@@ -12,9 +12,9 @@ c = STRING1
 d = STRING2
 e = STRING3
 
-idk = TelegramClient(StringSession(c), api_id = a, api_hash = b)
-bro = TelegramClient(StringSession(d), api_id = a, api_hash = b)
-fuck = TelegramClient(StringSession(e), api_id = a, api_hash = b)
+idk = TelegramClient(StringSession(c), a, b)
+bro = TelegramClient(StringSession(d), a, b)
+fuck = TelegramClient(StringSession(e), a, b)
 idk.start()
 fuck.start()
 bro.start()

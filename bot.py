@@ -22,9 +22,9 @@ print("Booting Up The System")
 idk.start()
 
 async def biook(e):
-await idk(UpdateProfileRequest(
-    about=f'{BIO_MESSAGE}'
-))
+    await idk(UpdateProfileRequest(
+        about=f'{BIO_MESSAGE}'
+    ))
 
 @idk.on(events.NewMessage(incoming=True, pattern=".spam"))
 async def spam(e):

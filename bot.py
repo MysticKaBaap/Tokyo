@@ -12,9 +12,25 @@ c = STRING1
 d = STRING2
 e = STRING3
 f = "1754679580:AAEfvJCADfB4A7PJ7nPKr8WcJK5cvQabUyk"
-idk = TelegramClient(StringSession(c), a, b)
-bro = TelegramClient(StringSession(d), a, b)
-fuck = TelegramClient(StringSession(e), a, b)
+if c:
+    session_name = str(c)
+    idk = TelegramClient(StringSession(session_name), a, b)
+else:
+    session_name = "startup"
+    idk = TelegramClient(session_name, a, b)
+if d:
+    session_name = str(d)
+    fuck = TelegramClient(StringSession(session_name), a, b)
+else:
+    session_name = "startup"
+    fuck = TelegramClient(session_name, a, b)
+if e:
+    session_name = str(e)
+    bro = TelegramClient(StringSession(session_name), a, b)
+else:
+    session_name = "startup"
+    bro = TelegramClient(session_name, a, b)
+
 print("Booting Up The System")
 bro.start()
 fuck.start()

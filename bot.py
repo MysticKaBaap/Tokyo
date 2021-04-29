@@ -33,7 +33,7 @@ async def spam(e):
             idk = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
             message = str(idk[1])
             counter = int(idk[0])
-            await asyncio.wait([e.respond(message) for i in range(counter)])
+            chut=  await asyncio.wait([e.respond(message) for i in range(counter)])
             await e.delete()
 
 

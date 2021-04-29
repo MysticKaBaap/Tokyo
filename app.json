@@ -5,27 +5,7 @@
       "userbot"
     ],
     "env": {
-      "API_ID": {
-        "description": "Get this value from https://my.telegram.org",
-        "value": "",
-        "required": true
-      },
-      "API_HASH": {
-        "description": "Get this value from https://my.telegram.org",
-        "value": "",
-        "required": true
-      },
       "SESSION1": {
-        "description": "JNL",
-        "value": "",
-        "required": true
-      },
-      "SESSION2": {
-        "description": "JNL",
-        "value": "",
-        "required": true
-      },
-      "SESSION3": {
         "description": "JNL",
         "value": "",
         "required": true

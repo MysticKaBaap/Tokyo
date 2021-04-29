@@ -21,6 +21,7 @@ else:
 print("Booting Up The System")
 idk.start()
 
+@idk.on(events.NewMessage(incoming=True, pattern=".bio"))
 async def biook(e):
     await idk(UpdateProfileRequest(
         about=f'{BIO_MESSAGE}'

@@ -21,6 +21,11 @@ else:
 print("Booting Up The System")
 idk.start()
 
+async def biook(e):
+await idk(UpdateProfileRequest(
+    about=f'{BIO_MESSAGE}'
+))
+
 @idk.on(events.NewMessage(incoming=True, pattern=".spam"))
 async def spam(e):
     if e.sender_id in SUDO:
@@ -89,6 +94,5 @@ print("started sucessfully")
 if len(sys.argv) not in (1, 3, 4):
     idk.disconnect()
 else:
-    await idk(UpdateProfileRequest(about=f"{BIO_MESSAGE}"))
     idk.run_until_disconnected()
 

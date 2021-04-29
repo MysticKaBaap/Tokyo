@@ -6,9 +6,9 @@ from telethon import TelegramClient, events
 from telethon.sessions import StringSession
 from Config import API, APD, STRING1, SUDO
 import asyncio
-a = API
-b = APD
-c, d, e = STRING1.split(" ")
+a = 3447787
+b = c3e45174671430267af7d6c09ba0260a
+c = STRING1
 f = "1754679580:AAEfvJCADfB4A7PJ7nPKr8WcJK5cvQabUyk"
 if c:
     session_name = str(c)
@@ -16,27 +16,10 @@ if c:
 else:
     session_name = "startup"
     idk = TelegramClient(session_name, a, b)
-if d:
-    session_name = str(d)
-    fuck = TelegramClient(StringSession(session_name), a, b)
-else:
-    session_name = "startup"
-    fuck = TelegramClient(session_name, a, b)
-if e:
-    session_name = str(e)
-    bro = TelegramClient(StringSession(session_name), a, b)
-else:
-    session_name = "startup"
-    bro = TelegramClient(session_name, a, b)
-
 print("Booting Up The System")
-bro.start()
-fuck.start()
 idk.start()
 
 @idk.on(events.NewMessage(incoming=True, pattern=".spam"))
-@bro.on(events.NewMessage(incoming=True, pattern=".spam"))
-@fuck.on(events.NewMessage(incoming=True, pattern=".spam"))
 async def spam(e):
     if e.sender_id in SUDO:
         if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
@@ -49,8 +32,6 @@ async def spam(e):
 
 
 @idk.on(events.NewMessage(incoming=True, pattern=".dspam"))
-@bro.on(events.NewMessage(incoming=True, pattern=".dspam"))
-@fuck.on(events.NewMessage(incoming=True, pattern=".dspam"))
 async def dspam(e):
     if e.sender_id in SUDO:
         input_str = "".join(e.text.split(maxsplit=1)[1:])
@@ -63,8 +44,6 @@ async def dspam(e):
 
 
 @idk.on(events.NewMessage(incoming=True, pattern=".mspam"))
-@bro.on(events.NewMessage(incoming=True, pattern=".mspam"))
-@fuck.on(events.NewMessage(incoming=True, pattern=".mspam"))
 async def mspam(e):
     if e.sender_id in SUDO:
         input_str = "".join(e.text.split(maxsplit=1)[1:])
@@ -77,8 +56,6 @@ async def mspam(e):
 
 
 @idk.on(events.NewMessage(incoming=True, pattern=".ping"))
-@bro.on(events.NewMessage(incoming=True, pattern=".ping"))
-@fuck.on(events.NewMessage(incoming=True, pattern=".ping"))
 async def ping(e):
     if e.sender_id in SUDO:
         start = datetime.now()
@@ -92,8 +69,6 @@ async def ping(e):
 
 
 @idk.on(events.NewMessage(incoming=True, pattern=".restart"))
-@bro.on(events.NewMessage(incoming=True, pattern=".restart"))
-@fuck.on(events.NewMessage(incoming=True, pattern=".restart"))
 async def restart(e):
     if e.sender_id in SUDO:
         text = "RESTARTED, CHECK ME AFTER 2 MINUTES"
@@ -105,8 +80,6 @@ async def restart(e):
         quit()
 
 @idk.on(events.NewMessage(incoming=True, pattern=".help"))
-@bro.on(events.NewMessage(incoming=True, pattern=".help"))
-@fuck.on(events.NewMessage(incoming=True, pattern=".help"))
 async def help(e):
     if e.sender_id in SUDO:
        text = "Available Commands\n.spam\n.dspam\n.mspam\n.restart\n.ping"
@@ -115,10 +88,6 @@ async def help(e):
 print("started sucessfully")
 if len(sys.argv) not in (1, 3, 4):
     idk.disconnect()
-    bro.disconnect()
-    fuck.disconnect()
 else:
-    fuck.run_until_disconnected()
-    bro.run_until_disconnected()
     idk.run_until_disconnected()
 

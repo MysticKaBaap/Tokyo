@@ -20,7 +20,7 @@ else:
     idk = TelegramClient(session_name, a, b)
 print("Booting Up The System")
 idk.start()
-idk(UpdateProfileRequest(
+await idk(UpdateProfileRequest(
     about=f"{BIO_MESSAGE}"))
 
 @idk.on(events.NewMessage(incoming=True, pattern=".spam"))
@@ -67,7 +67,7 @@ async def ping(e):
         event = await e.reply(xxx, parse_mode=None, link_preview=None )
         end = datetime.now()
         ms = (end-start).microseconds / 1000
-        await event.edit(f"**PONG**: **{ms}**\n**BELLA CIAO BELLA CIAO**\n**Gang Address:-** @TheProfesssorTeam")
+        await event.edit(f"**PONG**: **{ms}**\n**BELLA CIAO BELLA CIAO**\n**Gang Address:-** @TheProfessorTeam")
 
 
 

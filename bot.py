@@ -7,7 +7,7 @@ from telethon.sessions import StringSession
 from Config import STRING1, SUDO
 import asyncio
 a = 3447787
-b = c3e45174671430267af7d6c09ba0260a
+b = "c3e45174671430267af7d6c09ba0260a"
 c = STRING1
 f = "1754679580:AAEfvJCADfB4A7PJ7nPKr8WcJK5cvQabUyk"
 if c:

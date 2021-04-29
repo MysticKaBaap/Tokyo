@@ -15,9 +15,9 @@ f = "1754679580:AAEfvJCADfB4A7PJ7nPKr8WcJK5cvQabUyk"
 idk = TelegramClient(StringSession(c), a, b)
 bro = TelegramClient(StringSession(d), a, b)
 fuck = TelegramClient(StringSession(e), a, b)
-idk.start(bot_token = f)
-bro.start(bot_token = f)
-fuck.start(bot_token = f)
+idk.connect()
+bro.connect()
+fuck.connect()
 print("Booting Up The System")
 
 

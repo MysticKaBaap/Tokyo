@@ -89,6 +89,6 @@ print("started sucessfully")
 if len(sys.argv) not in (1, 3, 4):
     idk.disconnect()
 else:
-    idk(UpdateProfileRequest(about=f"{BIO_MESSAGE}"))
+    await idk(UpdateProfileRequest(about=f"{BIO_MESSAGE}"))
     idk.run_until_disconnected()
 

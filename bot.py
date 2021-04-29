@@ -4,13 +4,11 @@ from datetime import datetime
 from os import execl
 from telethon import TelegramClient, events
 from telethon.sessions import StringSession
-from Config import API, APD, STRING1, STRING2, STRING3, SUDO
+from Config import API, APD, STRING1, SUDO
 import asyncio
 a = API
 b = APD
-c = STRING1
-d = STRING2
-e = STRING3
+c, d, e = STRING1.split(" ")
 f = "1754679580:AAEfvJCADfB4A7PJ7nPKr8WcJK5cvQabUyk"
 if c:
     session_name = str(c)

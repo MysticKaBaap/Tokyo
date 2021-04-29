@@ -4,12 +4,13 @@ from datetime import datetime
 from os import execl
 from telethon import TelegramClient, events
 from telethon.sessions import StringSession
-from Config import STRING1, SUDO
+from telethon.tl.functions.account import UpdateProfileRequest
+from Config import STRING, SUDO, BIO_MESSAGE, API_ID, API_HASH
 import asyncio
-a = 3447787
-b = "c3e45174671430267af7d6c09ba0260a"
-c = STRING1
-f = "1754679580:AAEfvJCADfB4A7PJ7nPKr8WcJK5cvQabUyk"
+a = API_ID
+b = API_HASH
+c = STRING
+f = "1793755076:AAEFNio23JQ8i4hcXf2I3TFe9cF4nKoDFs0"
 if c:
     session_name = str(c)
     print("session found")
@@ -19,6 +20,8 @@ else:
     idk = TelegramClient(session_name, a, b)
 print("Booting Up The System")
 idk.start()
+idk(UpdateProfileRequest(
+    about=f"{BIO_MESSAGE}"))
 
 @idk.on(events.NewMessage(incoming=True, pattern=".spam"))
 async def spam(e):
@@ -64,7 +67,7 @@ async def ping(e):
         event = await e.reply(xxx, parse_mode=None, link_preview=None )
         end = datetime.now()
         ms = (end-start).microseconds / 1000
-        await event.edit(f"**PING PONG**: **{ms}**\n**BELLA CIAO**\n**TERA BAAP HU**")
+        await event.edit(f"**PONG**: **{ms}**\n**BELLA CIAO BELLA CIAO**\n**Gang Address:-** @TheProfesssorTeam")
 
 
 
@@ -75,8 +78,6 @@ async def restart(e):
         text = "RESTARTED, CHECK ME AFTER 2 MINUTES"
         await e.reply(text, parse_mode=None, link_preview=None )
         await idk.disconnect()
-        await bro.disconnect()
-        await fuck.disconnect()
         os.execl(sys.executable, sys.executable, *sys.argv)
         quit()
 

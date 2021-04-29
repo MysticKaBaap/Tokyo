@@ -98,8 +98,8 @@ async def help(e):
  
 print("started sucessfully")
 with bro:
-    bro.run_until_disconnected()
+    bro.loop.run_until_complete()
 with fuck:
-    fuck.run_until_disconnected()
+    fuck.loop.run_until_complete()
 with idk:
-    idk.run_until_disconnected()
+    idk.loop.run_until_complete()

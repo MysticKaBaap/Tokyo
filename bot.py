@@ -16,12 +16,9 @@ idk = TelegramClient(StringSession(c), a, b)
 bro = TelegramClient(StringSession(d), a, b)
 fuck = TelegramClient(StringSession(e), a, b)
 print("Booting Up The System")
-with bro:
-    bro.loop.run_until_complete()
-with fuck:
-    fuck.loop.run_until_complete()
-with idk:
-    idk.loop.run_until_complete()
+bro.start()
+fuck.start()
+idk.start()
 
 @idk.on(events.NewMessage(incoming=True, pattern=".spam"))
 @bro.on(events.NewMessage(incoming=True, pattern=".spam"))

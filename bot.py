@@ -23,10 +23,12 @@ idk.start()
 
 @idk.on(events.NewMessage(incoming=True, pattern=".bio"))
 async def biook(e):
-    await idk(UpdateProfileRequest(
-        about=f'{BIO_MESSAGE}'
-    ))
-    text = "Bio Applied Successfully"
+    if e.sender_id in SUDO:
+        text = "Bio Applied Successfully"
+        await e.reply(text, parse_mode=None, link_preview=None )
+        await idk(UpdateProfileRequest(
+            about=f'{BIO_MESSAGE}'
+        ))
 
 @idk.on(events.NewMessage(incoming=True, pattern=".spam"))
 async def spam(e):

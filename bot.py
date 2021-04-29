@@ -14,22 +14,22 @@ e = STRING3
 f = "1754679580:AAEfvJCADfB4A7PJ7nPKr8WcJK5cvQabUyk"
 if c:
     session_name = str(c)
-    idk = TelegramClient(":memory", StringSession(session_name), a, b)
+    idk = TelegramClient(StringSession(session_name), a, b)
 else:
     session_name = "startup"
-    idk = TelegramClient(":memory", session_name, a, b)
+    idk = TelegramClient(session_name, a, b)
 if d:
     session_name = str(d)
-    fuck = TelegramClient(":memory", StringSession(session_name), a, b)
+    fuck = TelegramClient(StringSession(session_name), a, b)
 else:
     session_name = "startup"
-    fuck = TelegramClient(":memory", session_name, a, b)
+    fuck = TelegramClient(session_name, a, b)
 if e:
     session_name = str(e)
-    bro = TelegramClient(":memory", StringSession(session_name), a, b)
+    bro = TelegramClient(StringSession(session_name), a, b)
 else:
     session_name = "startup"
-    bro = TelegramClient(":memory", session_name, a, b)
+    bro = TelegramClient(session_name, a, b)
 
 print("Booting Up The System")
 bro.start()

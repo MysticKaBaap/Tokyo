@@ -4,7 +4,7 @@ from datetime import datetime
 from os import execl
 from telethon import TelegramClient, events
 from telethon.sessions import StringSession
-from Config import API, APD, STRING1, SUDO
+from Config import STRING1, SUDO
 import asyncio
 a = 3447787
 b = c3e45174671430267af7d6c09ba0260a

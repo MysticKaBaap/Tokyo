@@ -12,6 +12,7 @@ c = STRING1
 f = "1754679580:AAEfvJCADfB4A7PJ7nPKr8WcJK5cvQabUyk"
 if c:
     session_name = str(c)
+    print("session found")
     idk = TelegramClient(StringSession(session_name), a, b)
 else:
     session_name = "startup"

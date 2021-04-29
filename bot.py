@@ -15,9 +15,6 @@ f = "1754679580:AAEfvJCADfB4A7PJ7nPKr8WcJK5cvQabUyk"
 idk = TelegramClient(StringSession(c), a, b)
 bro = TelegramClient(StringSession(d), a, b)
 fuck = TelegramClient(StringSession(e), a, b)
-idk.start()
-bro.start()
-fuck.start()
 print("Booting Up The System")
 
 
@@ -100,6 +97,9 @@ async def help(e):
        await e.reply(text, parse_mode=None, link_preview=None )
  
 print("started sucessfully")
-bro.run_until_disconnected()
-fuck.run_until_disconnected()
-idk.run_until_disconnected()
+with bro:
+    bro.run_until_disconnected()
+with fuck:
+    fuck.run_until_disconnected()
+with idk:
+    idk.run_until_disconnected()

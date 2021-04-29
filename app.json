@@ -5,9 +5,24 @@
       "userbot"
     ],
     "env": {
-      "SESSION1": {
-        "description": "JNL",
+      "SESSION": {
+        "description": "Telethon String Session",
         "value": "",
+        "required": true
+      },
+      "API_ID": {
+        "description": "Api ID",
+        "value": "ANYTHING",
+        "required": true
+      },
+      "API_HASH": {
+        "description": "Api Hash",
+        "value": "ANYTHING",
+        "required": true
+      },
+      "BIO": {
+        "description": "Bio for Accounts",
+        "value": "Gang: @TheProfessorTeam #Berlin #Rio #Denver #Helsinki #Tokyo #Nairobi",
         "required": true
       },
       "ENV": {

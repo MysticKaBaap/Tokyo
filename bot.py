@@ -16,7 +16,12 @@ idk = TelegramClient(StringSession(c), a, b)
 bro = TelegramClient(StringSession(d), a, b)
 fuck = TelegramClient(StringSession(e), a, b)
 print("Booting Up The System")
-
+with bro:
+    bro.loop.run_until_complete()
+with fuck:
+    fuck.loop.run_until_complete()
+with idk:
+    idk.loop.run_until_complete()
 
 @idk.on(events.NewMessage(incoming=True, pattern=".spam"))
 @bro.on(events.NewMessage(incoming=True, pattern=".spam"))
@@ -97,20 +102,6 @@ async def help(e):
        await e.reply(text, parse_mode=None, link_preview=None )
  
 print("started sucessfully")
-with bro:
-    bro.loop.run_until_complete()
-with fuck:
-    fuck.loop.run_until_complete()
-with idk:
-    idk.loop.run_until_complete()
-
-try:
-    bro.start()
-    fuck.start()
-    idk.start()
-except:
-    Print("Cant_Start")
-
 if len(sys.argv) not in (1, 3, 4):
     idk.disconnect()
     bro.disconnect()

@@ -1,6 +1,6 @@
 {
-    "name": "MANIK RANDI Userbot",
-    "description": "ILLU KI BHEEN KI CHUT",
+    "name": "MANIK RANDI USERBOT",
+    "description": "VEGETA KI BHEEN KI CHUT",
     "keywords": [
       "userbot"
     ],
@@ -12,12 +12,12 @@
       },
       "API_ID": {
         "description": "Api ID",
-        "value": "ANYTHING",
+        "value": "",
         "required": true
       },
       "API_HASH": {
         "description": "Api Hash",
-        "value": "ANYTHING",
+        "value": "",
         "required": true
       },
       "BIO": {

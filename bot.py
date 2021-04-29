@@ -111,7 +111,7 @@ try:
 except:
     Print("Cant_Start")
 
-if len(argv) not in (1, 3, 4):
+if len(sys.argv) not in (1, 3, 4):
     idk.disconnect()
     bro.disconnect()
     fuck.disconnect()

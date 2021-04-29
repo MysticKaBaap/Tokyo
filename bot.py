@@ -103,3 +103,11 @@ with fuck:
     fuck.loop.run_until_complete()
 with idk:
     idk.loop.run_until_complete()
+
+try:
+    bro.start()
+    fuck.start()
+    idk.start()
+except:
+    Print("Cant_Start")
+

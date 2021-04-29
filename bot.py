@@ -59,7 +59,7 @@ async def mspam(e):
         reply_message = await e.get_reply_message()
         bro = reply_message.media
         for i in range(1, counter):
-        await e.client.send_file(e.chat_id, bro)
+            await e.client.send_file(e.chat_id, bro)
 
 
 

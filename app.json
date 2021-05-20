@@ -1,5 +1,5 @@
 {
-    "name": "MANIK RANDI USERBOT",
+    "name": "MYSTIC RANDI USERBOT",
     "description": "VEGETA KI BHEEN KI CHUT",
     "keywords": [
       "userbot"
@@ -12,17 +12,17 @@
       },
       "API_ID": {
         "description": "Api ID",
-        "value": "",
+        "value": "5445895",
         "required": true
       },
       "API_HASH": {
         "description": "Api Hash",
-        "value": "",
+        "value": "b104f43c21861654005fa97c96a8a06f",
         "required": true
       },
       "BIO": {
         "description": "Bio for Accounts",
-        "value": "Gang: @TheProfessorTeam #Berlin #Rio #Denver #Helsinki #Tokyo #Nairobi",
+        "value": "Boss - @XerXboss",
         "required": true
       },
       "ENV": {
@@ -31,8 +31,8 @@
         "required": true
       },
       "SUDO": {
-        "description": "SUDO ME ACC KI ID YAAD SE DAALDENA DO USERS KE LIYE 222222 22222 ONLY SPACE*",
-        "value": "1645389137 1202361553",
+        "description": "SUDO ME MYSTIC KI BEHEN KA KOTHA NUMBER DALO",
+        "value": "1369416523",
         "required": true
       }
   },
